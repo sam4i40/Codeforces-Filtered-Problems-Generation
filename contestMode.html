@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Contest Mode</title>
+</head>
+
+<body>
+  <!-- Using bootstrap make a container -->
+  <div class="container" id="contestContainer">
+    <div class="row contestModeRow">
+      <!-- divide the container with cols equivalent of 5 cols -->
+      <div class="col-lg-5 contestDivOne">
+        <p class="titlePara titleParaContest" id="contestModeTitlePara">CP GAMIFY<span class="titleName">Contest Mode</span></p>
+        <p class="titleDescrip">Please enter your CF handle and difficulty range to get your desired problems</p>
+      </div>
+      <!-- divide the container with cols equivalent of 7 cols -->
+      <div class="col-lg-7 contestDivTwo">
+        <form action="/problems.html" method="post">
+          <!-- adding form to take the user input -->
+          <div class="form-group">
+            <label class="handle" for="handleId">CF HANDLE</label>
+            <input type="text" class="form-control handleIn" name="handle" placeholder="Enter Codeforces Handle" id="handleId" required>
+          </div>
+          <!-- adding class form-group to use in the css -->
+          <div class="form-group">
+            <label class="rating" for="rating">DIFFICULTY</label>
+            <input id="rating" type="number" class="form-control ratingIn" name="minRating" placeholder="Enter minimum difficulty" min="800" max="3500" required />
+            <span class="ratingDiff">-</span>
+            <input type="number" class="form-control ratingIn" name="maxRating" placeholder="Enter maximum difficulty" min="800" max="3500" required />
+          </div>
+          <div class="form-group">
+            <label class="probsNo" for="probs">NUMBER OF PROBLEMS</label>
+            <input id="probs" type="number" class="form-control probsIn" name="noOfProblems" placeholder="Enter no. of problems" min="1" max="100" required>
+          </div>
+          <button type="submit" class="btn submit-btn" id="contestSubmit">GET PROBLEMS</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
